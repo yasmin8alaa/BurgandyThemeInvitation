@@ -675,7 +675,7 @@ img{max-width:100%;display:block;}
     height:100dvh;
   }
   .env-layer{border-radius:0;}
-  .env-hint{bottom:9%;}
+  .env-hint{bottom:41%;}
 }
 /* ==== Real envelope photo, full screen: flap lifts, card rises ==== */
 .envelope-screen{padding:0;background:#3a0b16;overflow:hidden;
