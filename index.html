@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3E0E18">
+<title>Omar &amp; Laila — Engagement Invitation</title>
+<meta name="description" content="Omar and Laila are getting engaged on April 17, 2027. Open the invitation.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-sealed">
+  <!-- Falling petals, ambient background — sits behind everything -->
+<div id="petalField" aria-hidden="true"></div>
+
+<!-- ===================================================================
+     SCREEN 1 — THE SEALED ENVELOPE
+     =================================================================== -->
+<div class="envelope-screen" id="envelopeScreen">
+
+  <div class="envelope" id="envelope" role="button" tabindex="0"
+       aria-label="Tap to open the invitation">
+
+    <div class="env-clip">
+    <!-- Layer 1 — envelope body (what you see once the flap lifts) -->
+    <div class="env-layer env-body"></div>
+
+    <!-- The card that rises out of the envelope -->
+    <div class="env-card-wrap">
+    <div class="env-card" aria-hidden="true">
+      <div class="env-card-face">
+        <svg class="card-sprig" viewBox="0 0 220 44" aria-hidden="true">
+          <use href="#sprig-pair"></use>
+        </svg>
+        <p class="env-card-script" id="cardInitials">O &amp; L</p>
+        <p class="env-card-line">You are invited</p>
+        <p class="env-card-line">30.12.2026</p>
+      </div>
+    </div>
+    </div><!-- /.env-card-wrap -->
+
+    <!-- Front pocket -->
+    <div class="env-layer env-pocket"></div>
+    </div><!-- /.env-clip -->
+
+    <!-- Layer 2 — the flap, this is what actually opens -->
+    <div class="env-layer env-flap"></div>
+
+    <!-- Wax-seal monogram, sits on the tip of the flap -->
+    <div class="env-seal" id="envSeal">
+      <svg class="seal-ring" viewBox="0 0 160 160" aria-hidden="true">
+        <circle cx="80" cy="80" r="70" class="ring-outer"></circle>
+        <circle cx="80" cy="80" r="62" class="ring-inner"></circle>
+      </svg>
+      <span class="seal-initials" id="sealInitials">O &amp; L</span>
+    </div>
+
+    <p class="env-hint" id="envHint">Tap to open</p>
+  </div>
+</div>
+
+<!-- ===================================================================
+     THE INVITATION
+     =================================================================== -->
+<main class="invitation" id="invitation" aria-hidden="true">
+
+  <!-- Hero -->
+  <header class="hero">
+    <figure class="portrait portrait--hero">
+      <img id="coupleImage" alt="Laila and Omar" decoding="async">
+    </figure>
+
+    <p class="hero-eyebrow">Together with our families</p>
+    <h1 class="couple">
+      <span class="couple-name" id="groomName">Omar</span>
+      <span class="couple-amp">&amp;</span>
+      <span class="couple-name" id="brideName">Laila</span>
+    </h1>
+    <p class="hero-statement">We’re getting engaged</p>
+    <p class="hero-date" id="heroDate">April 17, 2027</p>
+  </header>
+
+  <!-- Countdown -->
+  <section class="countdown-band" id="countdownSection" aria-label="Countdown to the celebration">
+    <div class="container">
+      <p class="eyebrow-script">Almost there</p>
+      <h2 class="section-title">Counting Down to Our Special Day</h2>
+      <p class="section-sub" id="countdownLabel">TO OCTOBER 7, 2026</p>
+
+      <div class="countdown" id="countdown">
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cdDays">00</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cdHours">00</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cdMinutes">00</span>
+          <span class="countdown__label">Minutes</span>
+        </div>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="cdSeconds">00</span>
+          <span class="countdown__label">Seconds</span>
+        </div>
+      </div>
+
+      <p class="countdown-done" id="countdownDone" hidden>Today is our special day 🤍</p>
+    </div>
+  </section>
+
+  <!-- Welcome -->
+  <section class="panel">
+    <h2 class="script-title">Welcome!</h2>
+    <p class="prose">
+      From the very first moment, we knew our story was meant to be celebrated.
+      We would be honored to have you with us as we begin this beautiful new
+      chapter, surrounded by the people we love most.
+    </p>
+    <svg class="divider" viewBox="0 0 220 44" aria-hidden="true"><use href="#sprig-pair"></use></svg>
+  </section>
+
+  <!-- When & Where -->
+  <section class="panel">
+    <h2 class="script-title">When &amp; Where</h2>
+
+    <dl class="details">
+      <div class="detail">
+        <dt>Date</dt>
+        <dd id="detailDate">April 17, 2027</dd>
+      </div>
+      <div class="detail">
+        <dt>Time</dt>
+        <dd id="detailTime">7:30 PM</dd>
+      </div>
+      <div class="detail">
+        <dt>Venue</dt>
+        <dd><span id="detailHall">[HALL NAME]</span><span class="detail-sub" id="detailLocation">[LOCATION]</span> </dd>
+      </div>
+    </dl>
+
+    <figure class="portrait portrait--closing">
+      <img id="secondImage" alt="Laila and Omar" loading="lazy" decoding="async">
+      <a class="map-pin" id="mapPin" href="#" target="_blank" rel="noopener" aria-label="View location on map">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+        <span class="map-pin__shadow" aria-hidden="true"></span>
+      </a>
+    </figure>
+
+    <a class="button" id="mapsButton" href="#" target="_blank" rel="noopener">
+      <svg class="button-pin" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/>
+      </svg>
+      View location
+    </a>
+
+    <svg class="divider" viewBox="0 0 220 44" aria-hidden="true"><use href="#sprig-pair"></use></svg>
+  </section>
+    <!-- Timeline -->
+  <section class="panel" id="timeline">
+    <h2 class="script-title">TimeLine</h2>
+    <ol class="timeline">
+      <li class="tl-item">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-time">7:30 PM</span>
+        <span class="tl-title">Guests Arrive</span>
+        <span class="tl-text">Welcome drinks &amp; warm greetings</span>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-time">8:00 PM</span>
+        <span class="tl-title">The Entrance</span>
+        <span class="tl-text">The couple joins the celebration</span>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-time">9:00 PM</span>
+        <span class="tl-title">Dinner</span>
+        <span class="tl-text">Let&rsquo;s share a meal together</span>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <span class="tl-time">10:00 PM</span>
+        <span class="tl-title">Cake &amp; Dancing</span>
+        <span class="tl-text">Cake cutting, then the dance floor</span>
+      </li>
+    </ol>
+    <svg class="divider" viewBox="0 0 220 44" aria-hidden="true"><use href="#sprig-pair"></use></svg>
+  </section>
+
+  <!-- RSVP -->
+  <section class="panel" id="rsvp">
+    <h2 class="script-title">RSVP</h2>
+    <p class="prose">Kindly let us know if you can join us.</p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label class="rsvp-field">
+        <span class="rsvp-label">Your name</span>
+        <input type="text" id="rsvpName" name="name" autocomplete="name" required>
+      </label>
+
+      <fieldset class="rsvp-field rsvp-choice">
+        <legend class="rsvp-label">Will you attend?</legend>
+        <label class="rsvp-pill"><input type="radio" name="attend" value="yes" checked><span>YES</span></label>
+        <label class="rsvp-pill"><input type="radio" name="attend" value="no"><span>NO</span></label>
+      </fieldset>
+
+      <label class="rsvp-field">
+        <span class="rsvp-label">Message for the couple</span>
+        <textarea id="rsvpMessage" name="message" rows="4"></textarea>
+      </label>
+
+      <p class="rsvp-error" id="rsvpError" role="alert" hidden>Please enter your name.</p>
+      <button class="button" type="submit">Send RSVP</button>
+    </form>
+    <svg class="divider" viewBox="0 0 220 44" aria-hidden="true"><use href="#sprig-pair"></use></svg>
+  </section>
+
+  <!-- Closing -->
+  <footer class="closing">
+    
+
+    <p class="closing-eyebrow">Our next chapter starts here</p>
+    <p class="closing-couple">
+      <span id="closingGroom">Omar</span> <span class="closing-amp">&amp;</span> <span id="closingBride">Laila</span> 
+    </p>
+    <p class="prose prose--tight">We can’t wait to celebrate this special moment with you.</p>
+    <p class="closing-love">With love 🤍</p>
+    <svg class="divider divider--small" viewBox="0 0 220 44" aria-hidden="true"><use href="#sprig-pair"></use></svg>
+    <div>
+    <p class="prose prose--tight">Created by <b>NUVELLA</b></p>
+    </div>
+  </footer>
+</main>
+
+<!-- Music toggle -->
+<button class="music-toggle" id="musicToggle" type="button"
+        aria-label="Play background music" aria-pressed="false" hidden>
+  <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 18.5a2.5 2.5 0 1 1-2-2.45V5.2l10-2v10.3a2.5 2.5 0 1 1-2-2.45V5.64l-6 1.2V18.5Z"/>
+  </svg>
+  <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M8.5 5h2.2v14H8.5zM13.3 5h2.2v14h-2.2z"/>
+  </svg>
+</button>
+
+<audio id="music" loop preload="none"></audio>
+
+<!-- Shared botanical sprig -->
+<svg width="0" height="0" class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="sprig-single">
+      <path d="M110 22 C 88 22, 60 18, 30 8" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M96 20 C 90 12, 80 9, 72 11 C 78 18, 88 21, 96 20Z"/>
+      <path d="M84 18 C 79 26, 81 34, 88 37 C 90 29, 89 22, 84 18Z"/>
+      <path d="M74 16 C 68 9, 58 6, 50 8 C 56 15, 66 18, 74 16Z"/>
+      <path d="M62 13 C 57 21, 59 29, 66 32 C 68 24, 67 17, 62 13Z"/>
+      <path d="M50 10 C 44 4, 36 2, 29 4 C 35 10, 43 13, 50 10Z"/>
+      <circle cx="30" cy="8" r="2.1"/>
+    </g>
+    <g id="sprig-pair" fill="currentColor">
+      <g transform="translate(-0.5,0)"><use href="#sprig-single"/></g>
+      <g transform="translate(220,0) scale(-1,1)"><use href="#sprig-single"/></g>
+      <circle cx="110" cy="22" r="2.6" fill="currentColor"/>
+      <circle cx="110" cy="13" r="1.3" fill="currentColor"/>
+    </g>
+  </defs>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
