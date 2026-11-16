@@ -679,8 +679,8 @@ img{max-width:100%;display:block;}
 }
 /* ==== Real envelope photo, full screen: flap lifts, card rises ==== */
 .envelope-screen{padding:0;background:#3a0b16;overflow:hidden;
-  --flap-pts:0% 0%,100% 0%,100% 29.0%,53.0% 56.0%,51.8% 56.4%,50% 56.5%,48.2% 56.4%,47.0% 56.0%,0% 29.0%;
-  --body-pts:0% 28.6%,50% 57.3%,100% 28.6%,100% 100%,0% 100%;}
+ --flap-pts:0% 0%,100% 0%,100% 30.4%,53% 52.9%,51.8% 53.6%,50% 53.9%,48.2% 53.6%,47% 52.9%,0% 30.4%;
+--body-pts:0% 30%,50% 54%,100% 30%,100% 100%,0% 100%;}
 .envelope-screen{container-type:size;}
 
 /* صندوق الظرف بنفس أبعاد الصورة بالظبط (945:1663): عرض الشاشة كله من غير ضغط ولا قص */
@@ -714,7 +714,7 @@ img{max-width:100%;display:block;}
 
 /* الكارت بيطلع من جوه الفتحة بس ومش بيظهر قدام الظرف */
 .env-card-wrap{position:absolute;inset:0;z-index:4;pointer-events:none;
-  clip-path:polygon(-20% -20%,120% -20%,120% 17.1%,50% 57.3%,-20% 17.1%);}
+ clip-path:polygon(-20% -20%,120% -20%,120% 20.4%,50% 54%,-20% 20.4%);}
 .env-card{left:12%;right:12%;top:58%;height:58%;border-radius:3px;box-shadow:0 -6px 22px -6px rgba(0,0,0,.55);
   transition:transform 1.5s cubic-bezier(.33,.6,.25,1);}
 .envelope.is-releasing .env-card{transform:translateY(-79%);}
