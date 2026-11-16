@@ -685,7 +685,7 @@ img{max-width:100%;display:block;}
 
 /* صندوق الظرف بنفس أبعاد الصورة بالظبط (945:1663): عرض الشاشة كله من غير ضغط ولا قص */
 .envelope{aspect-ratio:1080/2400;height:auto;flex:none;filter:none;
-  width:min(100vw,45vh);width:min(100cqw,45cqh);}
+  width:max(100vw,45vh);width:max(100cqw,45cqh);}
 .env-layer{border-radius:0;background-size:100% 100%;background-position:center;}
 
 /* على الموبايلات الطويلة بيفضل مساحة فاضية فوق وتحت، فبتتملي بنفس الصورة معكوسة */
@@ -766,3 +766,5 @@ img{max-width:100%;display:block;}
 @keyframes pinBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
 @keyframes pinShadow{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(.55);opacity:.25;}}
 @media (prefers-reduced-motion:reduce){.map-pin svg,.map-pin__shadow{animation:none;}}
+
+.envelope-screen{grid-template:100% / 100%;place-items:center;}
